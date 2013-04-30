@@ -1,0 +1,87 @@
+<%= form_for @food_de, :html => { :class => 'form-horizontal' } do |f| %>
+  
+  <div class="control-group">
+    <%= f.label :fdgrp_cd, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :fdgrp_cd, :class => 'text_field', :rows => 2 %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :long_desc, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :long_desc, :class => 'text_area', :rows => 2 %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :shrt_desc, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :shrt_desc, :class => 'text_area', :rows => 2 %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :comname, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :comname, :class => 'text_area', :rows => 2 %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :manufacname, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :manufacname, :class => 'text_area', :rows => 2 %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :survey, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :survey, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :ref_desc, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :ref_desc, :class => 'text_area', :rows => 2 %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :refuse, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :refuse, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :sciname, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :sciname, :class => 'text_area', :rows => 2 %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :n_factor, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :n_factor, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :pro_factor, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :pro_factor, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :fat_factor, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :fat_factor, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :cho_factor, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :cho_factor, :class => 'text_field' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit "Update Food", :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                food_des_path, :class => 'btn' %>
+  </div>
+<% end %>

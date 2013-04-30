@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Nutrition Guide</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="navbar navbar-fluid-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <a class="brand" href="#">The Nutrition Guide</a>
+      <div class="nav-collapse">
+        <ul class="nav">
+          <li><%= link_to "Browse Foods" %></li>
+          <li><%= link_to "Price List" %></li>
+          <li><%= link_to "Contact Us" %></li>
+          <li><%= link_to "Cart" %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span10">
+      <%= yield %>
+    </div>
+    <div class="span2">
+      <h2>About Us</h2>
+      <p>This is Rich Blumer's informational nutrition guide. I use this guide along with excercise to stay healthy. You can also use this guide to stay healthy!!</p> 
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

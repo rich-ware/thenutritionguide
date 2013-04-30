@@ -1,0 +1,47 @@
+<%- model_class = FoodDe -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:ndb_no) %>:</strong></dt>
+  <dd><%= @food_de.ndb_no %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:fdgrp_cd) %>:</strong></dt>
+  <dd><%= @food_de.fdgrp_cd %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:long_desc) %>:</strong></dt>
+  <dd><%= @food_de.long_desc %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:shrt_desc) %>:</strong></dt>
+  <dd><%= @food_de.shrt_desc %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:comname) %>:</strong></dt>
+  <dd><%= @food_de.comname %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:manufacname) %>:</strong></dt>
+  <dd><%= @food_de.manufacname %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:survey) %>:</strong></dt>
+  <dd><%= @food_de.survey %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:ref_desc) %>:</strong></dt>
+  <dd><%= @food_de.ref_desc %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:refuse) %>:</strong></dt>
+  <dd><%= @food_de.refuse %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:sciname) %>:</strong></dt>
+  <dd><%= @food_de.sciname %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:n_factor) %>:</strong></dt>
+  <dd><%= @food_de.n_factor %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:pro_factor) %>:</strong></dt>
+  <dd><%= @food_de.pro_factor %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:fat_factor) %>:</strong></dt>
+  <dd><%= @food_de.fat_factor %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:cho_factor) %>:</strong></dt>
+  <dd><%= @food_de.cho_factor %></dd>
+</dl>
+
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              food_des_path, :class => 'btn'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_food_de_path(@food_de), :class => 'btn' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              food_de_path(@food_de),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
